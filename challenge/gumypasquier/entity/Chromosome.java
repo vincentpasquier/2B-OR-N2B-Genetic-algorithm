@@ -1,25 +1,24 @@
 package challenge.gumypasquier.entity;
 
-import challenge.gumypasquier.util.AccessRandom;
+import challenge.gumypasquier.util.Utilities;
 
 public class Chromosome implements Comparable<Chromosome> {
 
-	protected long chormosome;
+	protected boolean[] chromosome;
 	private short right = 0;
 	private short wrong = 0;
 	private boolean lastResponse;
 
 	public Chromosome() {
-		chormosome = AccessRandom.INSTANCE.getChromosome();
+		chromosome = Utilities.INSTANCE.getChromosome();
 	}
 
 	public Chromosome(Chromosome crossEntity) {
-		
+
 	}
 
-	// TODO : check
 	public boolean response(short history) {
-		return ((chormosome & (1 << history)) == 0);
+		return (chromosome[history]);
 	}
 
 	public void judge(boolean rightAnswer) {
@@ -39,11 +38,8 @@ public class Chromosome implements Comparable<Chromosome> {
 
 	public void mutate(double percent) {
 		for (short i = Long.SIZE; i >= 0; i--) {
-			if (AccessRandom.INSTANCE.getMutation(percent)) {
-				if (response(i))
-					chormosome = chormosome & ~(1 << i);
-				else
-					chormosome = chormosome & (1 << i);
+			if (Utilities.INSTANCE.getMutation(percent)) {
+				chromosome[i] = !chromosome[i];
 			}
 		}
 	}
