@@ -6,11 +6,11 @@ package challenge;
  * Interface for Genetic Algorithm. With this interface, the class
  * {@link Challenge} and {@link TheChallenge} are able to do the simulation and
  * "battle" between different Algorithms of this Classes.
- *</p>
- *<p>
+ * </p>
+ * <p>
  * Annotation: for the Constructor, it needs an empty constructor !
- *</p>
- *
+ * </p>
+ * 
  * @author D. Z.
  * @version 00.01.003
  */
@@ -59,7 +59,7 @@ public interface GenAlgo {
 	 * The time-line goes from Up (Position 0) which is the oldest decision, to
 	 * Down (Position {@link Challenge#HISTORY}) which is the newest decision.
 	 * </p>
-	 *
+	 * 
 	 * <p>
 	 * The history schematic representation:<br />
 	 * <table border="1">
@@ -89,7 +89,7 @@ public interface GenAlgo {
 	 * </tr>
 	 * </table>
 	 * </p>
-	 *
+	 * 
 	 * @param history
 	 *            the history of the last n rounds (n =
 	 *            {@link Challenge#HISTORY})
@@ -100,7 +100,7 @@ public interface GenAlgo {
 
 	/**
 	 * Gets the group name.
-	 *
+	 * 
 	 * @return the group name
 	 */
 	public String getGroupName();
