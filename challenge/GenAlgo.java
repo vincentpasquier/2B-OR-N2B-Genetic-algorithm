@@ -67,7 +67,7 @@ public interface GenAlgo {
 	 * <td><font color="red">History[{@link Challenge#HISTORY}][2]</font></td>
 	 * <td></td>
 	 * <td>your decision [0]</td>
-	 * <td>enemy decision [2]</td>
+	 * <td>enemy decision [1]</td>
 	 * <tr>
 	 * <tr>
 	 * <td>Oldest decision [0]
